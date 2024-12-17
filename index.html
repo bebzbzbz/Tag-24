@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Adventure</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                "anchor": "#ED4933",
+              },
+              fontSize: {
+                "meine-groesse": "7rem",
+                // in anführungszeichen weil js nichts mit - anfangen kann
+              },
+            },
+          },
+        };
+      </script>
+    <style type="text/tailwindcss">
+        @layer base {
+          @font-face {
+            font-family: "Open-Sans";
+            src: url(./assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+          }
+          h1 {
+            @apply text-4xl font-extrabold tracking-widest;
+          }
+          h2 {
+            @apply text-2xl uppercase font-extrabold tracking-widest;
+          }
+          .btn {
+            @apply bg-anchor text-white rounded-none;
+          }
+        }
+      </style>
+</head>
+<body class="font-['Open-Sans']">
+    <header class="h-screen bg-cover bg-[url('./assets/img/header.png')] relative uppercase text-white flex justify-center items-center flex-col gap-8">
+        <nav class="absolute top-5 right-10"><a href="">Menu</a></nav>
+        <h1>Wanderlust Adventures</h1>
+        <p class="font-light">A fine template for a travel agency with responsive focus</p>
+        <a href="" class="btn btn-error btn-wide">Let's go</a>
+    </header>
+    <main class="text-white">
+        <section class="bg-teal-500 text-center flex flex-col justify-center items-center">
+            <h2>„Not all those who wander are lost.“ – J.R.R. Tolkien</h2>
+            <p>Are you ready to embark on the journey of a lifetime? At Wanderlust Adventures, we specialize in curating unforgettable travel experiences tailored to your unique desires. Whether you're seeking a tranquil beach getaway, an exhilarating adventure in the mountains, or a culturally enriching city tour, we've got you covered. So, what are you waiting for? Unleash your wanderlust and let us transform your dreams into reality.</p>
+            <div class="icon-wrapper flex">
+                <div><img src="./assets/img/compass.svg" alt=""></div>
+                <div><img src="./assets/img/map.svg" alt=""></div>
+                <div><img src="./assets/img/route.svg" alt=""></div>
+            </div>
+        </section>
+        <section class="flex">
+            <img src="./assets/img/colombia.png" alt="" class="w-2/5">
+            <article class="bg-gray-600 w-3/5 flex flex-col justify-center">
+                <h2>Colombia</h2>
+                <h2>- vibrant latinamerica</h2>
+                <p>Experience the vibrant beauty of Colombia. From the lush coffee plantations to the colonial charm of Cartagena, this country offers captivating landscapes and rich cultural experiences. Explore Tayrona National Park's pristine beaches, wander through the Cocora Valley's towering palm trees, and immerse yourself in the flavors of Colombian cuisine. Unforgettable adventures await in this enchanting South American destination.</p>
+            </article>
+        </section>
+        <section class="flex">
+            <article class="bg-gray-700 w-3/5 flex flex-col justify-center">
+                <h2>Paris</h2>
+                <h2>- pure elegance</h2>
+                <p>Experience the timeless allure of Paris, the City of Lights. Stroll along the romantic Seine River, marvel at the iconic Eiffel Tower, and indulge in delectable French cuisine. From world-class art to charming cafes, Paris offers an enchanting blend of history and sophistication.</p>
+            </article>
+            <img src="./assets/img/paris.png" alt="" class="w-2/5">
+        </section>
+        <section class="flex">
+            <img src="./assets/img/hungary.png" alt="" class="w-2/5">
+            <article class="bg-gray-800 w-3/5 flex flex-col justify-center">
+                <h2>Hungary</h2>
+                <h2>- unknown beauty</h2>
+                <p>Discover the hidden gems of Hungary, a land of rich history and breathtaking landscapes. Explore the stunning architecture of Budapest, soak in the healing waters of thermal baths, and indulge in traditional Hungarian cuisine. From charming villages to enchanting castles, Hungary will captivate your heart.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
